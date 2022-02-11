@@ -40,14 +40,17 @@ function App() {
           {
             user &&
           <>
-            <NavLink to="/book-list">
-              Your Books
-            </NavLink>
-            <NavLink to="/create">
-              Create New Book
-            </NavLink>
             <button
+              className='logout'
               onClick={handleLogout}>Logout</button>
+            <div className='top'>
+              <NavLink to="/book-list" >
+              Your Books
+              </NavLink>
+              <NavLink to="/create" >
+              Create Book
+              </NavLink>
+            </div>
           </>
           }
         </header>
