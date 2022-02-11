@@ -26,8 +26,12 @@ export async function logout() {
 }
 
 
-export async function createBook() {
-    
+export async function createBook(book) {
+  const response = await client
+    .from('books')
+    .insert([book]);
+
+  return response.data;
 }
 
 export async function getAllBooks() {
