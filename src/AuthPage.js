@@ -30,16 +30,16 @@ export default function AuthPage(props) {
         <label>
           Email:
           <input 
-            value={email} 
             required type="email"
+            value={email} 
             name="email" 
             onChange={e => setEmail(e.target.value)}/>
         </label>
         <label>
           Password:
           <input 
-            value={email} 
             required type="password"
+            value={password} 
             name="password" 
             onChange={e => setPassword(e.target.value)}/>
         </label>
