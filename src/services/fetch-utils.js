@@ -31,9 +31,19 @@ export async function createBook() {
 }
 
 export async function getAllBooks() {
+  const response = await client
+    .from('books')
+    .select();
 
+  return response.data;
 }
 
-export async function getGameById() {
+export async function getBookById(id) {
+  const response = await client
+    .from('books')
+    .select()
+    .match({ id })
+    .single();
 
+  return response.data;
 }
