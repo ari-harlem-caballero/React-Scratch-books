@@ -6,5 +6,5 @@ export default function AuthPage() {
     <div>AuthPage
       {/* form w/ 2 buttons */}
     </div>
-  )
+  );
 }
