@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { getUser } from './services/fetch-utils';
+import { getUser, logout } from './services/fetch-utils';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +27,12 @@ function App() {
     fetchUser();
   }, []);
 
+  async function handleLogout() {
+    await logout();
+
+    user('');
+  }
+
   return (
     <Router>
       <div className="App">
@@ -40,9 +46,8 @@ function App() {
             <NavLink to="/create">
               Create New Book
             </NavLink>
-            <button>
-
-            </button>
+            <button
+              onClick={handleLogout}>Logout</button>
           </>
           }
         </header>
