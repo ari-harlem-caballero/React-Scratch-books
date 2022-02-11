@@ -2,17 +2,28 @@ body, html, #root, .App {
   height: 100%;
 }
 
-.App {
-  text-align: center;
-  width: 90%;
+* {
+  box-sizing: border-box;
 }
 
-.auth-page {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
+
+.App {
+  text-align: center;
+}
+
+/* .auth-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
 form label {
   display: block;
