@@ -23,10 +23,10 @@ export default function AuthPage(props) {
   }
 
   return (
-    <div className='auth-page'>
+    <div>
       <h1>Welcome to Book That Book</h1>
       {/* form w/ 2 buttons */}
-      <form>
+      <form className='auth-form'>
         <label>
           Email:
           <input 
