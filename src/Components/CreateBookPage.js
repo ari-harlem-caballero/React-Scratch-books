@@ -19,7 +19,7 @@ export default function CreateBookPage() {
       title: bookTitle,
       author: bookAuthor,
       genre: bookGenre,
-      release_date: bookDate,
+      release_year: bookDate,
       series: bookSeries,
       description: bookDescription,
     });
@@ -30,6 +30,35 @@ export default function CreateBookPage() {
   return (
     <div className='create'>
       {/* form(handleSub): all elems (onChange e.target), button */}
+      <form onSubmit={handleSubmit}>
+        <label>
+          Title:
+        </label>
+        <label>
+          Author:
+        </label>
+        <label>
+          Genre:
+          <select>
+            <option>History</option>
+            <option>Mystery</option>
+            <option>Fantasy</option>
+            <option>Science Fiction</option>
+            <option>Romance</option>
+            <option>Comic</option>
+          </select>
+        </label>
+        <label>
+          Publish Year:
+        </label>
+        <label>
+          Series:
+        </label>
+        <label>
+          Description:
+        </label>
+        <button>Create Book</button>
+      </form>
     </div>
   );
 }
