@@ -6,5 +6,5 @@ export default function CreateBookPage() {
     <div>CreateBookPage
       {/* form(handleSub): all elems (onChange e.target), button */}
     </div>
-  )
+  );
 }

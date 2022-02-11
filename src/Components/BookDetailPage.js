@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function BookDetailPage() {
   // state (singleBook, useRouteMatch), useEffect(fetch -> getBookID)
@@ -6,5 +6,5 @@ export default function BookDetailPage() {
     <div>BookDetailPage
       {/* detail page elems (title, author, publisher, etc) */}
     </div>
-  )
+  );
 }

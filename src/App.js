@@ -9,6 +9,9 @@ import {
   Redirect
 } from 'react-router-dom';
 import AuthPage from './AuthPage';
+import BookListPage from './Components/BookListPage';
+import BookDetailPage from './Components/BookDetailPage';
+import CreateBookPage from './Components/CreateBookPage';
 
 function App() {
   // track user(state), useEffect(fetch -> getUser), logout func
@@ -48,16 +51,32 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-
+              {
+                user
+                  ? <Redirect to="book-list"/>
+                  : <AuthPage setUser={setUser} />
+              }
             </Route>
             <Route exact path="/book-list">
-
+              {
+                user
+                  ? <BookListPage />
+                  : <Redirect to="/" />
+              }
             </Route>
             <Route exact path="/book-list/:id">
-
+              {
+                user
+                  ? <BookDetailPage />
+                  : <Redirect to="/" />
+              }
             </Route>
             <Route exact path="/create">
-
+              {
+                user
+                  ? <CreateBookPage />
+                  : <Redirect to="/" />
+              }
             </Route>
           </Switch>
         </main>
