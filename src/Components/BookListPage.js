@@ -17,7 +17,7 @@ export default function BookListPage() {
   }, []);
 
   return (
-    <div>
+    <div className='book-list'>
       {
         bookArr.map((book, i) =>
           <Book key={book.title + i}

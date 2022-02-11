@@ -70,7 +70,37 @@ form label input, form label textarea, form label select  {
   padding: 8px;
   border-radius: 10px;
   font-weight: 500;
-  text-decoration: none;
   color: rgb(44, 131, 131);
   background-color: rgba(0, 255, 255, 0.11);
+}
+
+a {
+  text-decoration: none;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-list a {
+  color: black;
+  border: 4px rgb(209, 240, 136) solid;
+  border-radius: 10px;
+  background-color: rgba(192, 231, 100, 0.192);
+  width: 40%;
+  height: 10%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.book-div h2, .book-div p {
+  margin: 5px;
+}
+
+.list-author {
+  font-style: italic;
 }

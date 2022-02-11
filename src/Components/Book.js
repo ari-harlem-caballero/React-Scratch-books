@@ -4,7 +4,7 @@ export default function Book({ book }) {
   // LINK to detail page, holds detail info (title, author, etc) IE: single div in ListPage
   return (
     <Link to={`/book-list/${book.id}`}>
-      <div className='book-list'>
+      <div className='book-div'>
         <h2>
           {book.title}
         </h2>
