@@ -30,16 +30,29 @@ export default function CreateBookPage() {
   return (
     <div className='create'>
       {/* form(handleSub): all elems (onChange e.target), button */}
+      <h2>Create New Book:</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Title:
+          <input 
+            required name='title'
+            value={bookTitle}
+            onChange={e => setBookTitle(e.target.value)}/>
         </label>
         <label>
           Author:
+          <input 
+            required name='author'
+            value={bookAuthor}
+            onChange={e => setBookAuthor(e.target.value)}
+          />
         </label>
         <label>
           Genre:
-          <select>
+          <select
+            required value={bookGenre}
+            onChange={e => setBookGenre(e.target.value)}
+          >
             <option>History</option>
             <option>Mystery</option>
             <option>Fantasy</option>
@@ -50,12 +63,29 @@ export default function CreateBookPage() {
         </label>
         <label>
           Publish Year:
+          <input 
+            required name='release_year'
+            value={bookDate}
+            onChange={e => setBookDate(e.target.value)}
+          />
         </label>
         <label>
-          Series:
+          Apart of Series:
+          <select
+            required value={bookSeries}
+            onChange={e => setBookSeries(e.target.value)}
+          >
+            <option value={true}>Yes</option>
+            <option value={false}>No</option>
+          </select>
         </label>
         <label>
           Description:
+          <textarea 
+            required name='description'
+            value={bookDescription}
+            onChange={e => setBookDescription(e.target.value)}
+          />
         </label>
         <button>Create Book</button>
       </form>
