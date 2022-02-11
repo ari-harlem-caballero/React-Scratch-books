@@ -25,11 +25,44 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      hi
-      {/* if user, render list/create/logout links */}
-      {/* routes: auth, home/list, book-detail, create */}
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          {
+            user &&
+          <>
+            <NavLink to="/book-list">
+              Your Books
+            </NavLink>
+            <NavLink to="/create">
+              Create New Book
+            </NavLink>
+            <button>
+
+            </button>
+          </>
+          }
+        </header>
+        {/* if user, render list/create/logout links */}
+        {/* routes: auth, home/list, book-detail, create */}
+        <main>
+          <Switch>
+            <Route exact path="/">
+
+            </Route>
+            <Route exact path="/book-list">
+
+            </Route>
+            <Route exact path="/book-list/:id">
+
+            </Route>
+            <Route exact path="/create">
+
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 
