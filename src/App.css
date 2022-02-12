@@ -101,6 +101,28 @@ a {
   margin: 5px;
 }
 
-.list-author {
+.list-author, .detail h3 {
   font-style: italic;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail h1, .detail h3, .detail p {
+  margin: 5px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-info p {
+  margin: 5px 40px;
 }

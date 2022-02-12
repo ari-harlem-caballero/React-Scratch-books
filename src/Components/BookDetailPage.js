@@ -21,20 +21,18 @@ export default function BookDetailPage() {
     <div className='detail'>
       {/* detail page elems (title, author, publisher, etc) */}
       <h1>{bookDetail.title}</h1>
-      <h2>{bookDetail.author}</h2>
+      <h3>{bookDetail.author}</h3>
       <p>{bookDetail.release_year}</p>
       <div className='book-info'>
         <p>
-          Genre:
-          {bookDetail.genre}
+          Genre: {bookDetail.genre}
         </p>
         <p>
-          Series:
+          Series: {bookDetail.series ? 'yes' : 'no'}
           {/* boolean needs to render as STRING */}
-          {bookDetail.series ? 'yes' : 'no'}
         </p>
       </div>
-      <p>{bookDetail.description}</p>
+      <p className='book-description'>{bookDetail.description}</p>
     </div>
   );
 }
