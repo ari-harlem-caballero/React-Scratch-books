@@ -38,6 +38,10 @@ form label input, form label textarea, form label select  {
   border-radius: 5px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App header {
   display: flex;
   flex-direction: column;
@@ -74,10 +78,6 @@ form label input, form label textarea, form label select  {
   background-color: rgba(0, 255, 255, 0.11);
 }
 
-a {
-  text-decoration: none;
-}
-
 .book-list {
   display: flex;
   flex-direction: row;
@@ -105,7 +105,7 @@ a {
   font-style: italic;
 }
 
-.detail {
+.detail, .create {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,4 +125,8 @@ a {
 
 .book-info p {
   margin: 5px 40px;
+}
+
+.create label {
+  margin: 5px;
 }
